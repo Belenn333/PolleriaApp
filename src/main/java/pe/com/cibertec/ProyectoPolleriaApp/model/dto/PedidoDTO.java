@@ -13,6 +13,7 @@ public class PedidoDTO {
     private LocalDateTime fechaPedido;
     private byte estadoPedido;
     private double total;
+    private String nombre;
     private List<PedidoDetalleDTO> detalles;
 }
 

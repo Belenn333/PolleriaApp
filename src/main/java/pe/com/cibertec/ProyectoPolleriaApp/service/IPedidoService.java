@@ -13,4 +13,6 @@ public interface IPedidoService {
     PedidoDTO actualizarPedido(PedidoDTO pedidoDTO);
     void eliminarPedido(int id);
     List<PedidoDetalleDTO> obtenerDetallesPorIdPedido(int id);
+
+    List<PedidoDTO> listAll(String nombre);
 }

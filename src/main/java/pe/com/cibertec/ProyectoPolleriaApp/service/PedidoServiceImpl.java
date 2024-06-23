@@ -87,4 +87,15 @@ public class PedidoServiceImpl implements IPedidoService {
             return null;
         }
     }
+
+    @Override
+    public List<PedidoDTO> listAll(String nombre){
+        if(nombre != null){
+            return pedidoRepository.findAll(nombre);
+        }
+        return pedidoRepository.findAll().stream()
+                .map(pedidoMapper::pedidoAPedidoDTO)
+                .collect(Collectors.toList());
+    }
+
 }
